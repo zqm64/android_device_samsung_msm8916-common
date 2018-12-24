@@ -61,6 +61,7 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.r_submix.default \
     audio.usb.default \
+    libaacwrapper \
     libaudioresampler \
     libqcompostprocbundle \
     libqcomvisualizer \
@@ -547,6 +548,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.narrow.searchrange=1
 
+# Whitelisted app
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
+    $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+
 # Wifi configuration files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/cred.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/cred.conf \
@@ -562,10 +568,12 @@ PRODUCT_PACKAGES += \
     com.android.media.remotedisplay \
     com.android.media.remotedisplay.xml
 
-# WiDi
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
 
 # Wifi
 PRODUCT_PACKAGES += \
