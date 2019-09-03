@@ -575,6 +575,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+PRODUCT_PACKAGES += \
+    libnl
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service.legacy \
