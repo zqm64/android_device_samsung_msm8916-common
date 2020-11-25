@@ -178,6 +178,14 @@ vendor/lib/libmm-als.so
 vendor/lib/libmm-abl.so
 vendor/lib/libdisp-aba.so
 
+# Power-off Alarm - tiare 8.1.0 OPM1.171019.026 V10.2.13.0.OCLMIXM
+etc/permissions/vendor-qti-hardware-alarm.xml:product/etc/permissions/vendor-qti-hardware-alarm.xml|04368de188e5eadf8043978939a9c1a397bac092
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
+vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar:product/framework/vendor.qti.hardware.alarm-V1.0-java.jar
+vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so
+vendor/lib/vendor.qti.hardware.alarm@1.0.so
+
 # Radio
 bin/diag_mdlog
 bin/diag_uart_log
