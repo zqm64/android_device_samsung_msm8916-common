@@ -576,6 +576,7 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_PACKAGES += \
+    vendor.display.config@1.0 \
     libnl
 
 # Wifi
